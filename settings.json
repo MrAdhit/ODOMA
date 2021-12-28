@@ -1,0 +1,7 @@
+{
+    "enable-status": true,
+    "status-message": "ODOMA",
+    "prefix": "!od",
+    "only-allow-in-channel": true,
+    "channelid": "925260734726823977"
+}

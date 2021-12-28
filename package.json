@@ -1,0 +1,16 @@
+{
+  "name": "odoma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MrAdhit <adhityarimba97@gmail.com>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord.js": "^13.4.0",
+    "log4js": "^6.3.0",
+    "rcon-client": "^4.2.3"
+  }
+}

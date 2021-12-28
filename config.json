@@ -1,0 +1,8 @@
+{
+    "token": "token",
+    "minecraft":{
+        "host": "localhost",
+        "port": 25575,
+        "password": "password"
+    }
+}
