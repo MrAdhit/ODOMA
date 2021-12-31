@@ -26,9 +26,9 @@ client.on("messageCreate", async(message)=> {
     if(setting["only-allow-in-channel"]){
         if(message.channelId != setting.channelid) return;
     }
-    if(message.content.split(" ")[0] != prefix) return;
-    const command = message.content.split(" ")[1];
-    const args =  message.content.replace(prefix + " ", "").replace(command + " ", "").split(" ");
+    if(!message.content.includes(prefix)) return;
+    const command = message.content.replace(prefix, "").split(" ")[0];
+    const args =  message.content.replace(prefix + command + " ", "").split(" ");
     switch(command){
         case "verify":
             if(typeof(whitelisted[message.author.id]) != "undefined") return message.channel.send(lang["iswhitelisted"].replace("{authorusername}", message.author.username).replace("{authordiscriminator}", message.author.discriminator).replace("{whitelistedname}", whitelisted[message.author.id]));
