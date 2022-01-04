@@ -2,5 +2,6 @@
     "iswhitelisted": "Akun Discord {authorusername}#{authordiscriminator} sudah digunakan untuk whitelist {whitelistedname}",
     "success-whitelisted": "Sukses menambahkan whitelist {whitelistedname} dengan akun Discord {authorusername}#{authordiscriminator}",
     "success-unwhitelisted": "Sukses menghapus {whitelistedname} dari akun Discord {authorusername}#{authordiscriminator}",
-    "isnotwhitelisted": "Tidak menemukan akun Minecraft yang tertaut ke akun Discord {authorusername}#{authordiscriminator}"
+    "isnotwhitelisted": "Tidak menemukan akun Minecraft yang tertaut ke akun Discord {authorusername}#{authordiscriminator}",
+    "emptyargs": "Username yang kamu masukan tidak valid!"
 }
