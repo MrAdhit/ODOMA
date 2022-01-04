@@ -29,9 +29,9 @@ client.on("messageCreate", async(message)=> {
     if(!message.content.includes(prefix)) return;
     const command = message.content.replace(prefix, "").split(" ")[0];
     const args =  message.content.replace(prefix + command + " ", "").split(" ");
-    if(args[0].length <= 0) return message.channel.send(lang["emptyargs"])
     switch(command){
         case "verify":
+            if(args[0].length <= 0) return message.channel.send(lang["emptyargs"])
             if(typeof(whitelisted[message.author.id]) != "undefined") return message.channel.send(lang["iswhitelisted"].replace(/\{authorusername\}/g, message.author.username).replace(/\{authordiscriminator\}/g, message.author.discriminator).replace(/\{whitelistedname\}/g, whitelisted[message.author.id]));
             whitelisted[message.author.id] = args[0];
             logger.info(`${args[0]} is requesting whitelist`);
@@ -44,7 +44,7 @@ client.on("messageCreate", async(message)=> {
             message.channel.send(lang["success-unwhitelisted"].replace(/\{authorusername\}/g, message.author.username).replace(/\{authordiscriminator\}/g, message.author.discriminator).replace(/\{whitelistedname\}/g, whitelisted[message.author.id]));
             (await rcon).send("whitelist remove " + whitelisted[message.author.id]);
             delete whitelisted[message.author.id];
-            logger.info(`${args[0]} is requesting unwhitelist`);
+            logger.info(`${whitelisted[message.author.id]} is requesting unwhitelist`);
             saveWhitelist();
             break;
     }
